@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Emandulo House of Culture & Heritage</title>
+
+  <meta
+    name="description"
+    content="Emandulo House of Culture — South African culture expressed through imvunulo, events, performance and production."
+  />
+
+  <meta name="theme-color" content="#173f2a" />
+
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- AOS -->
+  <link
+    href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+    rel="stylesheet"
+  />
+
+  <!-- Swiper -->
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <style id="vision-mission-failsafe">
+    /* Vision / Mission overlay — self-contained so it cannot be hidden by stale CSS */
+    .culture-image-break {
+      isolation: isolate;
+    }
+
+    .culture-image-frame {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .culture-image-frame > img {
+      z-index: 0;
+    }
+
+    .vision-mission-cards {
+      position: absolute !important;
+      z-index: 30 !important;
+
+      top: 17% !important;
+      left: clamp(28px, 4.5vw, 72px) !important;
+
+      width: min(390px, 31vw) !important;
+
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 24px !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+
+      pointer-events: auto;
+    }
+
+    .vision-mission-cards .vm-card {
+      position: relative !important;
+
+      display: block !important;
+
+      padding: 18px 20px 20px !important;
+
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none;
+
+      border-top: 1px solid rgba(216,185,120,.92) !important;
+      border-left: 1px solid rgba(216,185,120,.34) !important;
+
+      background: rgba(8,31,20,.72) !important;
+
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+
+      color: #fff !important;
+
+      box-shadow: 0 18px 48px rgba(0,0,0,.18);
+    }
+
+    .vision-mission-cards .vm-card::before {
+      content: "";
+
+      position: absolute;
+      top: -1px;
+      left: 0;
+
+      width: 44px;
+      height: 2px;
+
+      background: #d8b978;
+    }
+
+    .vision-mission-cards .vm-label {
+      display: block !important;
+
+      margin-bottom: 9px;
+
+      color: #d8b978 !important;
+
+      font-family: "Manrope", sans-serif;
+      font-size: 9px;
+      font-weight: 700;
+
+      letter-spacing: .19em;
+      text-transform: uppercase;
+    }
+
+    .vision-mission-cards .vm-card p {
+      display: block !important;
+
+      margin: 0 !important;
+
+      color: rgba(255,255,255,.88) !important;
+
+      font-family: "Manrope", sans-serif;
+      font-size: 13px !important;
+      font-weight: 400;
+
+      line-height: 1.55 !important;
+    }
+
+    .culture-image-word {
+      z-index: 5 !important;
+    }
+
+    .image-side-caption {
+      z-index: 10 !important;
+    }
+
+    @media (max-width: 991.98px) {
+      .vision-mission-cards {
+        top: 10% !important;
+        left: 28px !important;
+        width: min(365px, 48vw) !important;
+        gap: 16px !important;
+      }
+
+      .vision-mission-cards .vm-card p {
+        font-size: 12px !important;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .culture-image-frame {
+        position: relative !important;
+        inset: auto !important;
+        width: 100%;
+        height: min(68vh, 520px);
+      }
+
+      .vision-mission-cards {
+        position: relative !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+
+        width: 100% !important;
+        padding: 22px 20px 28px !important;
+
+        gap: 14px !important;
+      }
+
+      .vision-mission-cards .vm-card {
+        padding: 16px 16px 17px !important;
+        background: rgba(8,31,20,.88) !important;
+      }
+
+      .vision-mission-cards .vm-card p {
+        font-size: 13px !important;
+        line-height: 1.55 !important;
+      }
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =====================================================
+       FULLSCREEN MENU
+  ====================================================== -->
+
+  <div id="fullscreenMenu" class="fullscreen-menu-overlay">
+
+    <button
+      id="closeMenuBtn"
+      class="close-menu-btn"
+      aria-label="Close menu"
+    >
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+
+    <div class="container-fluid menu-inner">
+
+      <div class="row min-vh-100 align-items-center">
+
+
+        <div class="col-lg-8">
+
+          <span class="menu-kicker">
+            EMANDULO / DURBAN
+          </span>
+
+
+          <nav class="fullscreen-menu-nav">
+
+            <a href="#home" class="menu-link">
+              Home
+            </a>
+
+            <a href="#about" class="menu-link">
+              About
+            </a>
+
+            <a href="#services" class="menu-link">
+              Services
+            </a>
+
+            <a href="#founder" class="menu-link">
+              Founder
+            </a>
+
+            <a href="#work" class="menu-link">
+              Work
+            </a>
+
+            <a href="#contact" class="menu-link">
+              Contact
+            </a>
+
+          </nav>
+
+        </div>
+
+
+
+        <div class="col-lg-4 d-none d-lg-block">
+
+          <div class="menu-aside">
+
+            <p>
+              Culture is not decoration.
+              <br>
+              It is identity.
+            </p>
+
+            <div class="menu-aside-contact">
+              <a href="tel:+27781113250">
+                +27 78 111 3250
+              </a>
+
+              <a href="mailto:nelisiwesibiya9@gmail.com">
+                nelisiwesibiya9@gmail.com
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
+
+  <header id="home" class="hero">
+
+    <!-- Full hero artwork -->
+    <div class="hero-media" aria-hidden="true">
+      <img src="images/hero.png" alt="">
+    </div>
+
+    <!-- Deep green gradient makes the left copy area readable -->
+    <div class="hero-wash" aria-hidden="true"></div>
+
+    <!-- Animated Emandulo textile detail -->
+    <div class="hero-pattern" aria-hidden="true"></div>
+
+    <nav class="site-nav">
+      <a href="#home" class="site-logo">
+        <img
+          src="images/colorlogo.png"
+          alt="Emandulo House of Culture & Heritage"
+        >
+      </a>
+
+      <div class="site-nav-right">
+        <a href="#contact" class="nav-booking">Enquire</a>
+
+        <button
+          class="menu-toggle-btn"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span>Menu</span>
+          <span class="menu-icon-lines">
+            <span></span>
+            <span></span>
+          </span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="hero-grid">
+
+      <div class="hero-copy">
+        <div class="hero-index" data-aos="fade-up">
+          01 / CULTURE
+        </div>
+
+        <h1>
+          <span data-aos="fade-up">Culture,</span>
+          <em data-aos="fade-up" data-aos-delay="100">
+            carried forward.
+          </em>
+        </h1>
+
+        <div
+          class="hero-bottom"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <p>
+            Heritage expressed through attire, ceremony
+            and contemporary culture.
+          </p>
+
+          <a href="#about" class="circle-link">
+            <span>Explore</span>
+            <i class="fa-solid fa-arrow-down-long"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-image-caption">
+          <span>EMANDULO</span>
+          <span>HERITAGE / IDENTITY / EXPRESSION</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="bead-line" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+  </header>
+
+
+
+  <!-- =====================================================
+       MANIFESTO
+  ====================================================== -->
+
+  <section
+    id="about"
+    class="manifesto"
+  >
+
+    <div class="container-fluid">
+
+      <div class="row">
+
+
+        <div class="col-lg-4">
+
+          <span
+            class="section-index"
+            data-aos="fade-up"
+          >
+            02 / ROOTED IN HERITAGE
+          </span>
+
+        </div>
+
+
+
+        <div class="col-lg-8">
+
+          <h2
+            class="manifesto-title"
+            data-aos="fade-up"
+          >
+
+            Not simply worn.
+            <br>
+
+            Not simply performed.
+            <br>
+
+            <em>
+              Lived.
+            </em>
+
+          </h2>
+
+
+
+          <div
+            class="manifesto-foot"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+
+            <p>
+              Emandulo brings South African culture into
+              ceremony, entertainment and contemporary
+              creative expression.
+            </p>
+
+
+            <span>
+              EST. 2024
+              <br>
+              DURBAN / SOUTH AFRICA
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FULL-BLEED CULTURAL IMAGE
+  ====================================================== -->
+
+  <section class="culture-image-break">
+
+    <div class="culture-image-frame">
+
+      <img
+        src="images/traditional.png"
+        alt="Emandulo cultural attire"
+        loading="lazy"
+        data-aos="fade-up"
+      >
+
+      <div
+        class="culture-image-word"
+        aria-hidden="true"
+      >
+        EMANDULO
+      </div>
+
+      <div class="image-side-caption">
+
+        <span>
+          IMVUNULO
+        </span>
+
+        <span>
+          HERITAGE / IDENTITY / EXPRESSION
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="vision-mission-cards">
+
+      <article class="vm-card">
+        <span class="vm-label">Vision</span>
+        <p>
+          To build a respected South African cultural enterprise that
+          transforms heritage into professionally managed experiences,
+          products and media-ready services for local and global audiences.
+        </p>
+      </article>
+
+      <article class="vm-card">
+        <span class="vm-label">Mission</span>
+        <p>
+          To preserve and showcase culture through authentic attire,
+          informed coordination, compelling presentation and trusted
+          partnerships across private events, public platforms and
+          screen productions.
+        </p>
+      </article>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SERVICES
+  ====================================================== -->
+
+  <section
+    id="services"
+    class="services-editorial"
+  >
+
+    <div class="services-pattern" aria-hidden="true"></div>
+
+    <div class="container-fluid services-content">
+
+
+      <div class="services-heading">
+
+        <span
+          class="section-index light"
+          data-aos="fade-up"
+        >
+          03 / WHAT WE DO
+        </span>
+
+
+        <h2
+          data-aos="fade-up"
+        >
+          Made for
+          <em>the moment.</em>
+        </h2>
+
+      </div>
+
+
+
+      <div class="editorial-services-list">
+
+
+        <!-- SERVICE 01 -->
+
+        <article
+          class="editorial-service"
+          data-aos="fade-up"
+          data-aos-delay="0"
+        >
+
+          <span class="service-count">
+            01
+          </span>
+
+
+          <div class="service-wording">
+
+            <span class="service-action">
+              DRESS THE OCCASION
+            </span>
+
+            <h3>
+              Imvunulo & Beadwork
+            </h3>
+
+          </div>
+
+
+          <p>
+            Traditional attire and accessories for ceremonies,
+            celebrations and creative briefs.
+          </p>
+
+
+          <span class="service-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 02 -->
+
+        <article
+          class="editorial-service"
+          data-aos="fade-up"
+          data-aos-delay="70"
+        >
+
+          <span class="service-count">
+            02
+          </span>
+
+
+          <div class="service-wording">
+
+            <span class="service-action">
+              SHAPE THE MOMENT
+            </span>
+
+            <h3>
+              Cultural Events
+            </h3>
+
+          </div>
+
+
+          <p>
+            Cultural planning and coordination
+            for meaningful occasions.
+          </p>
+
+
+          <span class="service-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 03 -->
+
+        <article
+          class="editorial-service"
+          data-aos="fade-up"
+          data-aos-delay="140"
+        >
+
+          <span class="service-count">
+            03
+          </span>
+
+
+          <div class="service-wording">
+
+            <span class="service-action">
+              HOLD THE ROOM
+            </span>
+
+            <h3>
+              MC & Programme Direction
+            </h3>
+
+          </div>
+
+
+          <p>
+            Confident programme direction for cultural,
+            corporate and private events.
+          </p>
+
+
+          <span class="service-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 04 -->
+
+        <article
+          class="editorial-service"
+          data-aos="fade-up"
+          data-aos-delay="210"
+        >
+
+          <span class="service-count">
+            04
+          </span>
+
+
+          <div class="service-wording">
+
+            <span class="service-action">
+              BE SEEN
+            </span>
+
+            <h3>
+              Brand & Celebrity Appearances
+            </h3>
+
+          </div>
+
+
+          <p>
+            Selected appearances, activations and
+            public-facing engagements.
+          </p>
+
+
+          <span class="service-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </span>
+
+        </article>
+
+
+
+        <!-- SERVICE 05 -->
+
+        <article
+          class="editorial-service"
+          data-aos="fade-up"
+          data-aos-delay="280"
+        >
+
+          <span class="service-count">
+            05
+          </span>
+
+
+          <div class="service-wording">
+
+            <span class="service-action">
+              CULTURE ON SCREEN
+            </span>
+
+            <h3>
+              Production Wardrobe
+            </h3>
+
+          </div>
+
+
+          <p>
+            Cultural wardrobe and styling for screen,
+            stage and editorial production.
+          </p>
+
+
+          <span class="service-arrow" aria-hidden="true">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </span>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CULTURAL BRAND MOMENT
+       Animated textile is stronger here
+  ====================================================== -->
+
+  <section
+    class="red-statement pattern-section"
+  >
+
+    <div
+      class="statement-pattern"
+      aria-hidden="true"
+    ></div>
+
+
+    <div class="container-fluid statement-content">
+
+
+      <span
+        class="section-index light"
+        data-aos="fade-up"
+      >
+        CULTURE / PRESENCE / PURPOSE
+      </span>
+
+
+
+      <p
+        data-aos="fade-up"
+      >
+
+        An occasion may last a day.
+
+        <em>
+          What it represents lasts much longer.
+        </em>
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       FOUNDER
+  ====================================================== -->
+
+  <section
+    id="founder"
+    class="founder-editorial"
+  >
+
+    <div class="container-fluid">
+
+      <div class="row align-items-stretch g-0">
+
+
+        <!-- Founder image -->
+
+        <div class="col-lg-6">
+
+          <div
+            class="founder-editorial-image"
+            data-aos="fade-right"
+          >
+
+            <img
+              src="images/founder.jpeg"
+              alt="Nelisiwe Faith Sibiya"
+              loading="lazy"
+            >
+
+
+            <div class="founder-image-number">
+              04
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- Founder copy -->
+
+        <div class="col-lg-6">
+
+          <div class="founder-editorial-copy">
+
+
+            <span
+              class="section-index"
+              data-aos="fade-up"
+            >
+              FOUNDER / CEO
+            </span>
+
+
+
+            <h2
+              data-aos="fade-up"
+            >
+
+              Nelisiwe
+              <br>
+
+              <em>
+                Faith Sibiya.
+              </em>
+
+            </h2>
+
+
+
+            <div
+              class="founder-roles"
+              data-aos="fade-up"
+            >
+
+              <span>
+                ACTRESS
+              </span>
+
+              <span>
+                SINGER
+              </span>
+
+              <span>
+                MC
+              </span>
+
+              <span>
+                ENTREPRENEUR
+              </span>
+
+            </div>
+
+
+
+            <p
+              data-aos="fade-up"
+            >
+              A creative and cultural voice bringing
+              performance, heritage and business together
+              through Emandulo.
+            </p>
+
+
+
+            <div
+              class="founder-signoff"
+              data-aos="fade-up"
+            >
+
+              Founder-led.
+              <br>
+              Culture-first.
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       SELECTED WORK
+  ====================================================== -->
+
+  <section
+    id="work"
+    class="work-editorial"
+  >
+
+    <div class="container-fluid">
+
+
+      <div class="work-heading">
+
+        <span
+          class="section-index"
+          data-aos="fade-up"
+        >
+          05 / SELECTED WORK
+        </span>
+
+
+        <h2
+          data-aos="fade-up"
+        >
+          Culture in
+          <em>motion.</em>
+        </h2>
+
+      </div>
+
+
+
+      <div
+        class="swiper premium-work-swiper worksSwiper"
+        data-aos="fade-up"
+      >
+
+        <div class="swiper-wrapper">
+
+
+          <!-- PROJECT 01 -->
+
+          <div class="swiper-slide">
+
+            <article class="editorial-project">
+
+              <div class="editorial-project-image">
+
+                <img
+                  src="images/umemulo.jpg"
+                  alt="UMemulo cultural celebration"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="editorial-project-info">
+
+                <span>
+                  01 / UMEMULO
+                </span>
+
+                <span>
+                  IMVUNULO HIRE
+                </span>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+
+          <!-- PROJECT 02 -->
+
+          <div class="swiper-slide">
+
+            <article class="editorial-project">
+
+              <div class="editorial-project-image">
+
+                <img
+                  src="images/traditionalwed.jpg"
+                  alt="Traditional Wedding"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="editorial-project-info">
+
+                <span>
+                  02 / TRADITIONAL WEDDING
+                </span>
+
+                <span>
+                  IMVUNULO HIRE
+                </span>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+
+          <!-- PROJECT 03 -->
+
+          <div class="swiper-slide">
+
+            <article class="editorial-project">
+
+              <div class="editorial-project-image">
+
+                <img
+                  src="images/white.jpg"
+                  alt="White Wedding"
+                  loading="lazy"
+                >
+
+              </div>
+
+
+              <div class="editorial-project-info">
+
+                <span>
+                  03 / WHITE WEDDING
+                </span>
+
+                <span>
+                  MC / PROGRAMME DIRECTION
+                </span>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="work-controls">
+
+          <div class="swiper-pagination"></div>
+
+
+          <div class="work-navigation">
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =====================================================
+       CONTACT / FOOTER
+  ====================================================== -->
+
+  <footer
+    id="contact"
+    class="contact-editorial site-footer"
+  >
+
+    <div class="contact-pattern" aria-hidden="true"></div>
+
+    <div class="container-fluid contact-content">
+
+
+      <span
+        class="section-index light"
+        data-aos="fade-up"
+      >
+        06 / START A CONVERSATION
+      </span>
+
+
+      <div class="contact-editorial-grid">
+
+
+        <div>
+
+          <h2 data-aos="fade-up">
+            Your culture.
+            <br>
+
+            <em>
+              Your moment.
+            </em>
+          </h2>
+
+        </div>
+
+
+        <div class="contact-editorial-side">
+
+          <p data-aos="fade-up">
+            Tell us what you are planning.
+          </p>
+
+          <a
+            href="mailto:nelisiwesibiya9@gmail.com"
+            class="contact-main-link"
+            data-aos="fade-up"
+          >
+            Make an enquiry
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </a>
+
+        </div>
+
+
+      </div>
+
+
+      <div class="contact-info-row">
+
+        <a href="tel:+27781113250">
+          +27 78 111 3250
+        </a>
+
+        <a href="mailto:nelisiwesibiya9@gmail.com">
+          nelisiwesibiya9@gmail.com
+        </a>
+
+        <span>
+          DURBAN / SOUTH AFRICA
+        </span>
+
+      </div>
+
+
+      <div class="footer-integrated">
+
+        <div class="footer-brand-row">
+
+          <div class="footer-logo-wrap">
+
+            <img
+              src="images/colorlogo.png"
+              alt="Emandulo House of Culture"
+              loading="lazy"
+            >
+
+          </div>
+
+
+          <a
+            href="#home"
+            class="footer-back-top"
+          >
+            BACK TO TOP
+            <span aria-hidden="true">↑</span>
+          </a>
+
+        </div>
+
+
+        <div class="footer-meta">
+
+          <span>
+            © 2026 EMANDULO HOUSE OF CULTURE
+          </span>
+
+          <span>
+            CULTURE / HERITAGE / EXPRESSION
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </footer>
+
+
+
+  <!-- =====================================================
+       SCRIPTS
+  ====================================================== -->
+
+  <!-- Bootstrap -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+  </script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Emandulo -->
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Main diamond motif -->
+    <g id="diamond-motif">
+      <rect x="-18" y="-18" width="36" height="36" transform="rotate(45)" fill="#173F2A" fill-opacity="0.90"></rect>
+      <rect x="-10" y="-10" width="20" height="20" transform="rotate(45)" fill="#8B1718" fill-opacity="0.88"></rect>
+      <circle cx="0" cy="0" r="3.4" fill="#B58A4B"></circle>
+    </g>
+
+    <!-- Small bead diamond -->
+    <g id="mini-diamond">
+      <rect x="-8" y="-8" width="16" height="16" transform="rotate(45)" fill="#B58A4B" fill-opacity="0.85"></rect>
+      <circle cx="0" cy="0" r="2.1" fill="#173F2A"></circle>
+    </g>
+
+    <!-- Roof / zigzag motif -->
+    <g id="roofline">
+      <path d="M0 10L10 0L20 10L30 0L40 10L50 0L60 10" stroke="#173F2A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.42"></path>
+      <path d="M0 16L10 6L20 16L30 6L40 16L50 6L60 16" stroke="#B58A4B" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.36"></path>
+    </g>
+
+    <!-- Divider dots -->
+    <g id="bead-row">
+      <circle cx="0" cy="0" r="2.2" fill="#8B1718" opacity="0.55"></circle>
+      <circle cx="12" cy="0" r="2.2" fill="#B58A4B" opacity="0.55"></circle>
+      <circle cx="24" cy="0" r="2.2" fill="#173F2A" opacity="0.55"></circle>
+      <circle cx="36" cy="0" r="2.2" fill="#B58A4B" opacity="0.55"></circle>
+      <circle cx="48" cy="0" r="2.2" fill="#8B1718" opacity="0.55"></circle>
+    </g>
+  </defs>
+
+  <!-- transparent background by design -->
+
+  <!-- Main grid -->
+  <g opacity="0.75">
+    <use href="#diamond-motif" x="40" y="40"></use>
+    <use href="#diamond-motif" x="120" y="40"></use>
+    <use href="#diamond-motif" x="200" y="40"></use>
+
+    <use href="#diamond-motif" x="80" y="120"></use>
+    <use href="#diamond-motif" x="160" y="120"></use>
+
+    <use href="#diamond-motif" x="40" y="200"></use>
+    <use href="#diamond-motif" x="120" y="200"></use>
+    <use href="#diamond-motif" x="200" y="200"></use>
+  </g>
+
+  <!-- Secondary mini diamonds -->
+  <g opacity="0.75">
+    <use href="#mini-diamond" x="80" y="40"></use>
+    <use href="#mini-diamond" x="160" y="40"></use>
+
+    <use href="#mini-diamond" x="40" y="120"></use>
+    <use href="#mini-diamond" x="120" y="120"></use>
+    <use href="#mini-diamond" x="200" y="120"></use>
+
+    <use href="#mini-diamond" x="80" y="200"></use>
+    <use href="#mini-diamond" x="160" y="200"></use>
+  </g>
+
+  <!-- Roofline bands -->
+  <g>
+    <use href="#roofline" x="10" y="84"></use>
+    <use href="#roofline" x="90" y="84"></use>
+    <use href="#roofline" x="170" y="84"></use>
+
+    <use href="#roofline" x="10" y="164"></use>
+    <use href="#roofline" x="90" y="164"></use>
+    <use href="#roofline" x="170" y="164"></use>
+  </g>
+
+  <!-- Bead divider rows -->
+  <g>
+    <use href="#bead-row" x="16" y="16"></use>
+    <use href="#bead-row" x="96" y="16"></use>
+    <use href="#bead-row" x="176" y="16"></use>
+
+    <use href="#bead-row" x="16" y="224"></use>
+    <use href="#bead-row" x="96" y="224"></use>
+    <use href="#bead-row" x="176" y="224"></use>
+  </g>
+
+</svg>
