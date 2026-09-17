@@ -112,9 +112,31 @@ document.addEventListener("DOMContentLoaded", () => {
   closeButton?.addEventListener("click", closeMenu);
 
 
+  function resetMenu() {
+
+    if (!menu) return;
+
+    clearTimeout(closeTimer);
+    menu.classList.remove("active");
+    menu.style.display = "none";
+    document.body.classList.remove("menu-open");
+    openButton?.setAttribute("aria-expanded", "false");
+
+  }
+
+
+  window.addEventListener("pageshow", resetMenu);
+
+
   menuLinks.forEach((link) => {
 
-    link.addEventListener("click", closeMenu);
+    const href = link.getAttribute("href");
+
+    // Page links such as services.html use the browser's native navigation.
+    // Only in-page hash links need the menu-closing behavior here.
+    if (href?.startsWith("#")) {
+      link.addEventListener("click", closeMenu);
+    }
 
   });
 
